@@ -124,7 +124,7 @@ allocproc(void)
 found:
   p->pid = allocpid();
   p->state = USED;
-  p->tracemask = 0;   // Dhans - [Added]
+  p->tracemask = 0; // Dhans - [Added]
 
   // Allocate a trapframe page.
   if ((p->trapframe = (struct trapframe *)kalloc()) == 0) {
@@ -290,7 +290,7 @@ kfork(void)
 
   safestrcpy(np->name, p->name, sizeof(p->name));
 
-  np->tracemask = p->tracemask;   //Dhans - [Added]
+  np->tracemask = p->tracemask; //Dhans - [Added]
 
   pid = np->pid;
 
