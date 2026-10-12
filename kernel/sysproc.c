@@ -124,15 +124,14 @@ sys_uptime(void)
 //   return 0;
 // }
 
-
 //Dhans - [Added]
 uint64
 sys_trace(void)
 {
-    int mask;
+  int mask;
 
-    argint(0, &mask);
+  argint(0, &mask);
 
-    myproc()->tracemask = mask;
-    return 0;
+  myproc()->tracemask = mask;
+  return 0;
 }
